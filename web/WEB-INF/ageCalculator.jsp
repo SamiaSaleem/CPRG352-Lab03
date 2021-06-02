@@ -17,46 +17,15 @@
             <label>Enter your age:</label>
             <input type="number" name="age" value="${age}" id="Age"> 
             <br>
-            <input type="submit" value="Age next birthday" onchange="calculateAge()">
+            <input type="submit" value="Age next birthday">
         </form>
-          <p>${message}</p>  
-          <div id="displayAge">
-              
-          </div>
+          <p>${message} ${message2}</p>  
+           
+
+         
         
-            <link>
+       <a href=arithmetic>Arithmetic Calculator</a>
     </body>
 </html>
 
-<script>
-    function GetValue(id){
-    var qtyElement = document.getElementById(id);
-    var stringValue = "";
-    if (qtyElement && qtyElement.value !== undefined) {
-        qtyAsNumber = parseInt(qtyElement.value);
-        try {
-            if (qtyElement.value != ""){
-                stringValue = qtyElement.value;
-            }
-            else {
-                stringValue = "";
-            }
-        }
-        catch {
-            stringValue = "";
-        }
-    }
-    return stringValue; 
-}
-    function calculateAge(){
-       var currentAge = GetValue("age") 
-         var nextAge = currentAge + 1;
-         
-          var fragmentHTML =  ` <p>Your age next birthday will be ${nextAge}</p>`
-          
-          var element = document.getElementById("displayAge");
-             if (element && element.innerHTML != undefined){
-            element.innerHTML = fragmentHTML;
-        }
-    }
-</script>
+
